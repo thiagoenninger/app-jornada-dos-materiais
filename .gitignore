@@ -1,0 +1,22 @@
+# dependências
+node_modules/
+
+# build gerado
+dist/
+
+# conteúdo pesado - NÃO versionar vídeos e imagens
+content/videos/
+content/images/
+
+# sistema operacional
+Thumbs.db
+desktop.ini
+.DS_Store
+
+# editor
+.vscode/*
+!.vscode/extensions.json
+
+# logs
+*.log
+logs/

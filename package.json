@@ -1,0 +1,24 @@
+{
+  "name": "jornada-dos-materiais",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Jornada dos Materiais - Casa de Metal",
+  "type": "commonjs",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "start": "node server/index.js",
+    "format": "prettier --write ."
+  },
+  "dependencies": {
+    "express": "^5.2.1",
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8",
+    "ws": "^8.21.3"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^6.0.5",
+    "prettier": "^3.9.6",
+    "vite": "^8.2.1"
+  }
+}
