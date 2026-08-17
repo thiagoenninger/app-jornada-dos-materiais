@@ -26,11 +26,11 @@ Em desenvolvimento, use `npm run dev` para atualização automática do front.
 
 ## Estrutura
 
-- `server/`   — servidor local
-- `apps/`     — interfaces React (tablet e telas)
-- `content/`  — materiais, vídeos e imagens (vídeos não versionados)
-- `scripts/`  — utilitários
-- `docs/`     — manuais de operação
+- `server/` — servidor local
+- `apps/` — interfaces React (tablet e telas)
+- `content/` — materiais, vídeos e imagens (vídeos não versionados)
+- `scripts/` — utilitários
+- `docs/` — manuais de operação
 
 ## Conteúdo
 

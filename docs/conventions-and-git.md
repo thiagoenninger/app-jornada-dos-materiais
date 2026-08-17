@@ -23,34 +23,34 @@ Regras simples, mas siga com disciplina — inconsistência aqui vira confusão 
 
 ### Idioma
 
-| O quê | Idioma | Exemplo |
-|---|---|---|
-| Nomes de pastas, arquivos, variáveis, funções | Inglês | `screen`, `material`, `playbackState` |
-| Textos que o visitante lê | Português | `"Escolha um material"`, `"Aço"` |
-| Comentários no código | Português | `// avança para a próxima tela` |
-| Mensagens de commit | Português | `adiciona validação da configuração` |
+| O quê                                         | Idioma    | Exemplo                               |
+| --------------------------------------------- | --------- | ------------------------------------- |
+| Nomes de pastas, arquivos, variáveis, funções | Inglês    | `screen`, `material`, `playbackState` |
+| Textos que o visitante lê                     | Português | `"Escolha um material"`, `"Aço"`      |
+| Comentários no código                         | Português | `// avança para a próxima tela`       |
+| Mensagens de commit                           | Português | `adiciona validação da configuração`  |
 
 A regra em uma frase: **o código é em inglês, o conteúdo é em português.** Todo texto que aparece para o visitante mora em campos de exibição separados, nunca misturado com identificadores.
 
 ### Arquivos e pastas
 
-| Tipo | Padrão | Exemplo |
-|---|---|---|
-| Componentes React | PascalCase, extensão `.jsx` | `MaterialCard.jsx`, `WaitingScreen.jsx` |
-| Funções utilitárias | camelCase, extensão `.js` | `formatDuration.js` |
-| Pastas | minúsculas, sem acento, hífen para separar | `src/shared`, `content/videos` |
-| Documentos | minúsculas, hífen | `conventions-and-git.md` |
+| Tipo                | Padrão                                     | Exemplo                                 |
+| ------------------- | ------------------------------------------ | --------------------------------------- |
+| Componentes React   | PascalCase, extensão `.jsx`                | `MaterialCard.jsx`, `WaitingScreen.jsx` |
+| Funções utilitárias | camelCase, extensão `.js`                  | `formatDuration.js`                     |
+| Pastas              | minúsculas, sem acento, hífen para separar | `src/shared`, `content/videos`          |
+| Documentos          | minúsculas, hífen                          | `conventions-and-git.md`                |
 
 ### Identificadores de material
 
 Esses valores viram **nome de pasta e pedaço de endereço**, então não podem ter acento, espaço ou letra maiúscula:
 
-| Material (exibição) | Identificador (código) | Pasta dos vídeos |
-|---|---|---|
-| Aço | `steel` | `content/videos/steel/` |
-| Alumínio | `aluminum` | `content/videos/aluminum/` |
-| Nióbio | `niobium` | `content/videos/niobium/` |
-| Refratários | `refractories` | `content/videos/refractories/` |
+| Material (exibição) | Identificador (código) | Pasta dos vídeos               |
+| ------------------- | ---------------------- | ------------------------------ |
+| Aço                 | `steel`                | `content/videos/steel/`        |
+| Alumínio            | `aluminum`             | `content/videos/aluminum/`     |
+| Nióbio              | `niobium`              | `content/videos/niobium/`      |
+| Refratários         | `refractories`         | `content/videos/refractories/` |
 
 Ao adicionar um material novo, siga o mesmo padrão: nome em inglês, minúsculo, sem acento, sem espaço.
 
@@ -82,31 +82,31 @@ git push origin v0.1
 
 ### Plano de tags
 
-| Tag | Marco |
-|---|---|
-| `v0.1` | Etapa 1 — fundação |
+| Tag    | Marco                             |
+| ------ | --------------------------------- |
+| `v0.1` | Etapa 1 — fundação                |
 | `v0.2` | Etapa 2 — conteúdo e configuração |
-| `v0.3` | Etapa 3 — servidor |
-| `v0.4` | Etapa 4 — app das telas |
-| `v0.5` | Etapa 5 — app do tablet |
-| `v0.6` | Etapa 6 — conteúdo real |
-| `v0.7` | Etapa 7 — modo museu |
-| `v1.0` | Etapa 8 — homologado e instalado |
+| `v0.3` | Etapa 3 — servidor                |
+| `v0.4` | Etapa 4 — app das telas           |
+| `v0.5` | Etapa 5 — app do tablet           |
+| `v0.6` | Etapa 6 — conteúdo real           |
+| `v0.7` | Etapa 7 — modo museu              |
+| `v1.0` | Etapa 8 — homologado e instalado  |
 
 Depois da inauguração, correções viram `v1.1`, `v1.2`, e assim por diante.
 
 ### Comandos úteis de tag
 
-| Situação | Comando |
-|---|---|
-| Listar todas as tags | `git tag` |
-| Ver o que tem numa tag | `git show v0.3` |
-| Enviar uma tag para o GitHub | `git push origin v0.3` |
-| Enviar todas as tags de uma vez | `git push --tags` |
-| Voltar o projeto para uma versão antiga | `git checkout v0.3` |
-| Voltar para o estado atual | `git checkout main` |
+| Situação                                | Comando                |
+| --------------------------------------- | ---------------------- |
+| Listar todas as tags                    | `git tag`              |
+| Ver o que tem numa tag                  | `git show v0.3`        |
+| Enviar uma tag para o GitHub            | `git push origin v0.3` |
+| Enviar todas as tags de uma vez         | `git push --tags`      |
+| Voltar o projeto para uma versão antiga | `git checkout v0.3`    |
+| Voltar para o estado atual              | `git checkout main`    |
 
-> `git checkout v0.3` te coloca num estado só de leitura daquela versão (o Git chama isso de *detached HEAD*). É seguro para olhar ou testar. Para voltar ao normal, `git checkout main`.
+> `git checkout v0.3` te coloca num estado só de leitura daquela versão (o Git chama isso de _detached HEAD_). É seguro para olhar ou testar. Para voltar ao normal, `git checkout main`.
 
 ---
 
@@ -129,26 +129,26 @@ Sempre que terminar algo que funciona, mesmo pequeno. Um commit por tarefa concl
 
 Descreva o que a mudança faz, no presente:
 
-| | Exemplo |
-|---|---|
-| Bom | `adiciona validação de vídeo faltando` |
-| Bom | `corrige transição preta entre telas` |
-| Bom | `move lista de materiais para materials.json` |
-| Ruim | `ajustes` |
-| Ruim | `mudanças` |
-| Ruim | `wip` |
-| Ruim | `teste` |
+|      | Exemplo                                       |
+| ---- | --------------------------------------------- |
+| Bom  | `adiciona validação de vídeo faltando`        |
+| Bom  | `corrige transição preta entre telas`         |
+| Bom  | `move lista de materiais para materials.json` |
+| Ruim | `ajustes`                                     |
+| Ruim | `mudanças`                                    |
+| Ruim | `wip`                                         |
+| Ruim | `teste`                                       |
 
 O teste rápido: daqui a seis meses, lendo só a mensagem, você saberia o que aquele commit fez?
 
 ### Comandos de inspeção
 
-| Situação | Comando |
-|---|---|
-| Ver o histórico resumido | `git log --oneline` |
-| Ver as últimas 10 mudanças | `git log --oneline -10` |
-| Ver o que mudou nos arquivos | `git diff` |
-| Ver o que já está marcado para commit | `git diff --staged` |
+| Situação                              | Comando                 |
+| ------------------------------------- | ----------------------- |
+| Ver o histórico resumido              | `git log --oneline`     |
+| Ver as últimas 10 mudanças            | `git log --oneline -10` |
+| Ver o que mudou nos arquivos          | `git diff`              |
+| Ver o que já está marcado para commit | `git diff --staged`     |
 
 ---
 
@@ -179,14 +179,14 @@ git branch -D experiment-preload       # -D força a exclusão mesmo sem merge
 
 A tabela que mais salva:
 
-| Situação | Comando |
-|---|---|
-| Estraguei um arquivo e quero voltar ao último commit | `git restore caminho/do/arquivo` |
-| Quero descartar TODAS as mudanças não commitadas | `git restore .` |
-| Commitei mas ainda não fiz push, e quero refazer | `git reset --soft HEAD~1` |
-| Commitei e já fiz push — preciso desfazer sem apagar histórico | `git revert HEAD` |
-| Quero ver como estava numa versão antiga | `git checkout v0.3` (depois `git checkout main` para voltar) |
-| Quero ver o histórico | `git log --oneline` |
+| Situação                                                       | Comando                                                      |
+| -------------------------------------------------------------- | ------------------------------------------------------------ |
+| Estraguei um arquivo e quero voltar ao último commit           | `git restore caminho/do/arquivo`                             |
+| Quero descartar TODAS as mudanças não commitadas               | `git restore .`                                              |
+| Commitei mas ainda não fiz push, e quero refazer               | `git reset --soft HEAD~1`                                    |
+| Commitei e já fiz push — preciso desfazer sem apagar histórico | `git revert HEAD`                                            |
+| Quero ver como estava numa versão antiga                       | `git checkout v0.3` (depois `git checkout main` para voltar) |
+| Quero ver o histórico                                          | `git log --oneline`                                          |
 
 ### Regra de ouro
 
@@ -196,11 +196,11 @@ O motivo prático: reescrever história que já está no GitHub causa conflito e
 
 ### Diferença entre os três comandos parecidos
 
-| Comando | O que faz |
-|---|---|
-| `git restore` | Descarta mudanças em arquivos, sem mexer em commits |
-| `git reset --soft HEAD~1` | Desfaz o último commit, mas mantém as mudanças nos arquivos |
-| `git revert HEAD` | Cria um commit novo que desfaz o anterior, preservando o histórico |
+| Comando                   | O que faz                                                          |
+| ------------------------- | ------------------------------------------------------------------ |
+| `git restore`             | Descarta mudanças em arquivos, sem mexer em commits                |
+| `git reset --soft HEAD~1` | Desfaz o último commit, mas mantém as mudanças nos arquivos        |
+| `git revert HEAD`         | Cria um commit novo que desfaz o anterior, preservando o histórico |
 
 ---
 

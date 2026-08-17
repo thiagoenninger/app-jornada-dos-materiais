@@ -1,0 +1,95 @@
+{
+  "version": 1,
+  "settings": {
+    "resetDelaySeconds": 3,
+    "safetyMarginSeconds": 10
+  },
+  "stages": [
+    {
+      "number": 1,
+      "title": "Minérios",
+      "subtitle": "Formação, presença e diversidade dos recursos minerais"
+    },
+    {
+      "number": 2,
+      "title": "Mineração",
+      "subtitle": "Pesquisa, extração, beneficiamento e gestão responsável"
+    },
+    {
+      "number": 3,
+      "title": "Metalurgia",
+      "subtitle": "Transformação, controle de processos e criação de propriedades"
+    },
+    {
+      "number": 4,
+      "title": "Materiais",
+      "subtitle": "Aplicações, cotidiano, circularidade e futuro"
+    }
+  ],
+  "materials": [
+    {
+      "id": "steel",
+      "name": "Aço",
+      "tagline": "Tudo começa na natureza",
+      "description": "Do minério de ferro às cidades: o aço está nas pontes, nos prédios, nos carros e em quase tudo ao seu redor.",
+      "color": "#26215C",
+      "cardImage": "images/steel.jpg",
+      "order": 1,
+      "enabled": true,
+      "videos": [
+        { "stage": 1, "duration": 75.0 },
+        { "stage": 2, "duration": 80.0 },
+        { "stage": 3, "duration": 90.0 },
+        { "stage": 4, "duration": 80.0 }
+      ]
+    },
+    {
+      "id": "aluminum",
+      "name": "Alumínio",
+      "tagline": "Leve, resistente e infinitamente reciclável",
+      "description": "Da bauxita ao cotidiano: o alumínio combina leveza e resistência, e pode ser reciclado sem perder suas propriedades.",
+      "color": "#0F6E56",
+      "cardImage": "images/aluminum.jpg",
+      "order": 2,
+      "enabled": true,
+      "videos": [
+        { "stage": 1, "duration": 75.0 },
+        { "stage": 2, "duration": 80.0 },
+        { "stage": 3, "duration": 90.0 },
+        { "stage": 4, "duration": 80.0 }
+      ]
+    },
+    {
+      "id": "niobium",
+      "name": "Nióbio",
+      "tagline": "O elemento que o Brasil lidera no mundo",
+      "description": "Presente em ligas especiais, o nióbio aumenta a resistência dos materiais e é um dos minerais em que o Brasil tem posição de destaque global.",
+      "color": "#993C1D",
+      "cardImage": "images/niobium.jpg",
+      "order": 3,
+      "enabled": true,
+      "videos": [
+        { "stage": 1, "duration": 75.0 },
+        { "stage": 2, "duration": 80.0 },
+        { "stage": 3, "duration": 90.0 },
+        { "stage": 4, "duration": 80.0 }
+      ]
+    },
+    {
+      "id": "refractories",
+      "name": "Refratários",
+      "tagline": "Os materiais que suportam o calor extremo",
+      "description": "Sem eles, nenhuma indústria de altas temperaturas existiria: os refratários revestem fornos e suportam calor que fundiria qualquer outro material.",
+      "color": "#72243E",
+      "cardImage": "images/refractories.jpg",
+      "order": 4,
+      "enabled": true,
+      "videos": [
+        { "stage": 1, "duration": 75.0 },
+        { "stage": 2, "duration": 80.0 },
+        { "stage": 3, "duration": 90.0 },
+        { "stage": 4, "duration": 80.0 }
+      ]
+    }
+  ]
+}
