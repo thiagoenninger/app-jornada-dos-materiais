@@ -57,7 +57,7 @@ function cleanOldLogs() {
 function write(level, message, details) {
     const now = new Date();
 
-    const extra = details ? '' + Object.entries(details).map(([KeyboardEvent, value]) => `${key}=${value}`).join(' ') : '';
+    const extra = details ? ' ' + Object.entries(details).map(([key, value]) => `${key}=${value}`).join(' ') : ' ';
 
     const line = `${timeStamp(now)}  ${level.padEnd(5)}  ${message}${extra}`;
 

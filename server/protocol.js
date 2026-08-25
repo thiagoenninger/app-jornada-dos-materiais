@@ -12,11 +12,7 @@ const ServerMessage = {
   ERROR: 'error',
 };
 
-const Status = {
-  IDLE: 'idle',
-  PLAYING: 'playing',
-  RESETTING: 'resetting',
-};
+const Status = { IDLE: 'idle', PLAYING: 'playing', RESETTING: 'resetting' };
 
 const Role = {
   TABLET: 'tablet',

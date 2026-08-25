@@ -131,6 +131,14 @@ function formatUptime(seconds) {
 const server = http.createServer(app);
 const wss = new WebSocketServer({server})
 
+setInterval(() => {
+    for (const client of wss.clients) {
+        if(client.isAlive === false) {client.terminate(); continue;}
+        client.isAlive = false;
+        client.ping();
+    }
+}, 30000)
+
 let journeysToday = 0
 
 function send(socket, type, payload) {
@@ -152,8 +160,10 @@ function describe(socket) {
 
 wss.on('connection', (socket) => {
     socket.meta = null;
-
+    socket.isAlive = true;
     send(socket, ServerMessage.STATE, machine.getState())
+
+    socket.on('pong', () => {socket.isAlive = true})
 
     socket.on('message', (raw) => {
         let message
@@ -232,7 +242,7 @@ function handleHello(socket, message) {
     socket.meta = {role, screen}
     logger.info(`${describe(socket)} conectou`)
 
-    send(socket, ServerMessage,STATE, machine.getState())
+    send(socket, ServerMessage.STATE, machine.getState())
 }
 
 // ---- on Windows, at 1st start, you HAVE to permit Node in private networks
