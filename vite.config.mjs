@@ -13,9 +13,9 @@ export default defineConfig({
     emptyOutDir: true,
     rollupOptions: {
       input: {
-        //tablet: resolve(dirname, 'apps/tablet.html'),
-        screen: resolve(dirname, 'apps/screen.html')
-      }
-    }
-  }
+        tablet: resolve(dirname, 'apps/tablet.html'),
+        screen: resolve(dirname, 'apps/screen.html'),
+      },
+    },
+  },
 });
